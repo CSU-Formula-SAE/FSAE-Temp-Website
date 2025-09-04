@@ -55,7 +55,7 @@ body {
 
 @media (min-width: 992px) {
     .w-nav-menu {
-      display: flex !important; /* Or block depending on your layout */
+      display: flex !important;
     }
   }
   

@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become a Sponsor | Formula Vikes Racing</title>
+
+    <!-- Tailwind via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter font -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+    <!-- Alpine.js for interactions (Lightweight JS framework, useful for counters/modals) -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!-- Chart.js for graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+            },
+            colors: {
+              "vikes-green": "#016b4d",
+              "vikes-green-neon":
+                "#00ff7f" /* Brighter for dark mode accents */,
+              "primary-bg": "#0a0a0a" /* Darker black */,
+              "secondary-bg": "#121212" /* Slightly lighter black */,
+              "primary-text": "#FFFFFF",
+              "secondary-text": "#9CA3AF",
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #016b4d;
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00ff7f;
+      }
+
+      .neon-text {
+        text-shadow: 0 0 10px rgba(0, 255, 127, 0.5);
+      }
+
+      .neon-box {
+        box-shadow: 0 0 20px rgba(0, 255, 127, 0.2);
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-primary-bg text-primary-text font-sans antialiased overflow-x-hidden"
+  >
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="main.html" class="flex items-center gap-2 group">
+          <!-- Back Arrow -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-vikes-green-neon group-hover:-translate-x-1 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+          <span class="font-bold text-lg tracking-wider">VIKINGS FORMULA</span>
+        </a>
+
+        <a
+          href="#tiers"
+          class="hidden md:block bg-vikes-green hover:bg-vikes-green-neon hover:text-black transition-all text-white px-6 py-2 rounded-full font-bold uppercase text-sm tracking-widest shadow-[0_0_15px_rgba(1,107,77,0.5)] hover:shadow-[0_0_25px_rgba(0,255,127,0.6)]"
+        >
+          Sponsor Us
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- SECTION 1: HERO (Video Background) -->
+      <section
+        class="relative h-screen flex items-center justify-center overflow-hidden"
+      >
+        <!-- Video Background Overlay -->
+        <div class="absolute inset-0 bg-black/60 z-10"></div>
+
+        <!-- Background Video (Placeholder) -->
+        <!-- Note: Using a poster image fallback and a placeholder video URL. Please replace video.mp4 with actual footage. -->
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="/Team Photos/saeteamphoto.jpg"
+          class="absolute inset-0 w-full h-full object-cover z-0 opacity-50"
+        >
+          <source
+            src="https://assets.mixkit.co/videos/preview/mixkit-mechanic-viewing-a-car-engine-4892-large.mp4"
+            type="video/mp4"
+          />
+          <!-- Fallback image if video fails -->
+          <img
+            src="/Team Photos/saeteamphoto.jpg"
+            class="w-full h-full object-cover"
+          />
+        </video>
+
+        <div class="relative z-20 container mx-auto px-6 text-center">
+          <div
+            class="inline-block mb-4 px-4 py-1 rounded-full border border-vikes-green-neon/50 bg-vikes-green/10 text-vikes-green-neon text-sm font-semibold tracking-widest uppercase animate-fade-in-up"
+          >
+            Cleveland State University
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight uppercase italic tracking-tighter"
+          >
+            Investing in the <br />
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white via-vikes-green-neon to-vikes-green neon-text"
+              >Future of Mobility</span
+            >
+          </h1>
+
+          <p
+            class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 font-light"
+          >
+            Vikings Formula is training the next generation of engineers in
+            high-voltage systems, battery technology, and automotive design.
+          </p>
+
+          <div
+            class="flex flex-col md:flex-row gap-6 justify-center items-center"
+          >
+            <a
+              href="#tiers"
+              class="group relative px-8 py-4 bg-vikes-green-neon text-black font-black text-xl uppercase tracking-widest rounded transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,127,0.6)]"
+            >
+              Become a Partner
+              <div
+                class="absolute inset-0 rounded ring-2 ring-white/50 group-hover:ring-white/80 scale-105 opacity-0 group-hover:opacity-100 transition-all duration-300"
+              ></div>
+            </a>
+
+            <a
+              href="resources/VIKINGS FORMULA FSAE INVESTMENT PROPOSAL.pdf"
+              target="_blank"
+              class="px-8 py-4 border border-white/30 hover:bg-white/10 hover:border-white text-white font-bold text-lg uppercase tracking-widest rounded transition-all flex items-center gap-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+              Download Deck
+            </a>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+          class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-vikes-green-neon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <!-- SECTION 2: THE WHY (Animated Stats) -->
+      <section class="py-24 bg-primary-bg relative">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Stat 1 -->
+            <div
+              x-data="{ count: 0 }"
+              x-intersect.once="setInterval(() => { if(count < 40) count++ }, 50)"
+              class="bg-secondary-bg p-8 rounded-2xl border border-white/5 hover:border-vikes-green-neon/50 transition-colors group text-center neon-box"
+            >
+              <div
+                class="text-5xl font-black text-white mb-2 group-hover:text-vikes-green-neon transition-colors"
+              >
+                <span x-text="count">0</span>+
+              </div>
+              <p class="text-gray-400 font-medium">Future Engineers</p>
+            </div>
+
+            <!-- Stat 2 -->
+            <div
+              x-data="{ count: 0 }"
+              x-intersect.once="setInterval(() => { if(count < 30) count++ }, 50)"
+              class="bg-secondary-bg p-8 rounded-2xl border border-white/5 hover:border-vikes-green-neon/50 transition-colors group text-center neon-box"
+            >
+              <div
+                class="text-5xl font-black text-white mb-2 group-hover:text-vikes-green-neon transition-colors flex justify-center items-end"
+              >
+                <span class="text-2xl mr-1">&lt;</span>3.<span
+                  x-text="Math.floor(count/10)"
+                  >0</span
+                >s
+              </div>
+              <p class="text-gray-400 font-medium">0-60 MPH Target</p>
+            </div>
+
+            <!-- Stat 3 -->
+            <div
+              x-data="{ count: 0 }"
+              x-intersect.once="setInterval(() => { if(count < 100) count+=2 }, 30)"
+              class="bg-secondary-bg p-8 rounded-2xl border border-white/5 hover:border-vikes-green-neon/50 transition-colors group text-center neon-box"
+            >
+              <div
+                class="text-5xl font-black text-white mb-2 group-hover:text-vikes-green-neon transition-colors"
+              >
+                <span x-text="count">0</span>%
+              </div>
+              <p class="text-gray-400 font-medium">Electric Powertrain</p>
+            </div>
+
+            <!-- Stat 4 -->
+            <div
+              x-data="{ count: 0 }"
+              x-intersect.once="setInterval(() => { if(count < 52) count++ }, 40)"
+              class="bg-secondary-bg p-8 rounded-2xl border border-white/5 hover:border-vikes-green-neon/50 transition-colors group text-center neon-box"
+            >
+              <div
+                class="text-5xl font-black text-white mb-2 group-hover:text-vikes-green-neon transition-colors"
+              >
+                $<span x-text="count">0</span>k
+              </div>
+              <p class="text-gray-400 font-medium">Fundraising Goal</p>
+            </div>
+          </div>
+
+          <div class="mt-16 text-center max-w-4xl mx-auto">
+            <p class="text-2xl text-gray-300 font-light leading-relaxed">
+              We aren't just building a race car.
+              <span class="text-white font-bold"
+                >We are training the next generation of engineers</span
+              >
+              in high-voltage systems, battery technology, and automotive
+              design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: THE MACHINE (Hotspots) -->
+      <section
+        class="py-24 bg-gradient-to-b from-primary-bg to-secondary-bg relative overflow-hidden"
+      >
+        <!-- Section Title -->
+        <div class="text-center mb-16 relative z-10">
+          <h2
+            class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white"
+          >
+            The Machine
+          </h2>
+          <div
+            class="h-1 w-24 bg-vikes-green-neon mx-auto mt-4 rounded-full shadow-[0_0_15px_rgba(0,255,127,0.8)]"
+          ></div>
+        </div>
+
+        <div
+          class="container mx-auto px-6 relative h-[600px] flex items-center justify-center"
+        >
+          <!-- Car Image Container -->
+          <div class="relative w-full max-w-5xl">
+            <!-- Placeholder Car Image (Side Profile) -->
+            <!-- Replace with actual side profile image of the car -->
+            <img
+              src="/Team Photos/car_render.jpg"
+              onerror="
+                this.src =
+                  'https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+              "
+              class="w-full h-auto object-contain animate-float drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+              alt="Vikings Formula Electric Car"
+            />
+
+            <!-- Hotpots -->
+            <!-- 1. Battery -->
+            <div
+              class="absolute top-[45%] left-[45%] group"
+              x-data="{ open: false }"
+            >
+              <button
+                @mouseenter="open = true"
+                @mouseleave="open = false"
+                class="w-8 h-8 rounded-full bg-vikes-green-neon/20 border-2 border-vikes-green-neon flex items-center justify-center animate-pulse-slow cursor-pointer hover:bg-vikes-green-neon hover:scale-110 transition-all"
+              >
+                <div class="w-3 h-3 bg-vikes-green-neon rounded-full"></div>
+              </button>
+              <!-- Tooltip -->
+              <div
+                x-show="open"
+                x-transition.opacity.duration.300ms
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-black/90 backdrop-blur border border-vikes-green-neon/50 p-4 rounded-xl shadow-[0_0_30px_rgba(0,255,127,0.3)] z-50"
+              >
+                <h4
+                  class="text-vikes-green-neon font-bold uppercase text-sm mb-1"
+                >
+                  HV Accumulator
+                </h4>
+                <p class="text-xs text-gray-300">
+                  Custom BMS designed by students. 400V architecture enabling
+                  peak performance.
+                </p>
+                <!-- Arrow -->
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black/90"
+                ></div>
+              </div>
+            </div>
+
+            <!-- 2. Wheels/Suspension -->
+            <div
+              class="absolute bottom-[20%] left-[20%] group"
+              x-data="{ open: false }"
+            >
+              <button
+                @mouseenter="open = true"
+                @mouseleave="open = false"
+                class="w-8 h-8 rounded-full bg-vikes-green-neon/20 border-2 border-vikes-green-neon flex items-center justify-center animate-pulse-slow cursor-pointer hover:bg-vikes-green-neon hover:scale-110 transition-all"
+              >
+                <div class="w-3 h-3 bg-vikes-green-neon rounded-full"></div>
+              </button>
+              <!-- Tooltip -->
+              <div
+                x-show="open"
+                x-transition.opacity.duration.300ms
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-black/90 backdrop-blur border border-vikes-green-neon/50 p-4 rounded-xl shadow-[0_0_30px_rgba(0,255,127,0.3)] z-50"
+              >
+                <h4
+                  class="text-vikes-green-neon font-bold uppercase text-sm mb-1"
+                >
+                  Suspension & Chassis
+                </h4>
+                <p class="text-xs text-gray-300">
+                  Double wishbone suspension optimized for cornering G's.
+                  Lightweight Chromoly spaceframe.
+                </p>
+                <!-- Arrow -->
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black/90"
+                ></div>
+              </div>
+            </div>
+
+            <!-- 3. Motor -->
+            <div
+              class="absolute bottom-[25%] right-[22%] group"
+              x-data="{ open: false }"
+            >
+              <button
+                @mouseenter="open = true"
+                @mouseleave="open = false"
+                class="w-8 h-8 rounded-full bg-vikes-green-neon/20 border-2 border-vikes-green-neon flex items-center justify-center animate-pulse-slow cursor-pointer hover:bg-vikes-green-neon hover:scale-110 transition-all"
+              >
+                <div class="w-3 h-3 bg-vikes-green-neon rounded-full"></div>
+              </button>
+              <!-- Tooltip -->
+              <div
+                x-show="open"
+                x-transition.opacity.duration.300ms
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-64 bg-black/90 backdrop-blur border border-vikes-green-neon/50 p-4 rounded-xl shadow-[0_0_30px_rgba(0,255,127,0.3)] z-50"
+              >
+                <h4
+                  class="text-vikes-green-neon font-bold uppercase text-sm mb-1"
+                >
+                  Electric Drivetrain
+                </h4>
+                <p class="text-xs text-gray-300">
+                  High torque electric motor delivering instant acceleration.
+                  80kW peak power.
+                </p>
+                <!-- Arrow -->
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black/90"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: THE TEAM (Data Viz) -->
+      <section class="py-24 bg-secondary-bg">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Text / Recruitment Hook -->
+            <div>
+              <h2
+                class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white mb-6"
+              >
+                Crew.
+              </h2>
+              <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Our sponsors get
+                <span class="text-vikes-green-neon font-bold"
+                  >first access to a talent pool</span
+                >
+                proficient in EV tech, CAD, and Project Management. We are
+                multidisciplinary.
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-lg text-gray-400">
+                  <div class="w-3 h-3 rounded-full bg-vikes-green"></div>
+                  Mechanical Engineering (62%)
+                </li>
+                <li class="flex items-center gap-3 text-lg text-gray-400">
+                  <div class="w-3 h-3 rounded-full bg-blue-500"></div>
+                  Electrical Engineering (24%)
+                </li>
+                <li class="flex items-center gap-3 text-lg text-gray-400">
+                  <div class="w-3 h-3 rounded-full bg-purple-500"></div>
+                  CS & Chemical (14%)
+                </li>
+              </ul>
+            </div>
+
+            <!-- Donut Chart -->
+            <div class="relative h-96 w-full flex items-center justify-center">
+              <canvas id="teamChart" class="max-w-md"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: THE ROADMAP (Timeline) -->
+      <section class="py-24 bg-primary-bg">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white"
+            >
+              The Roadmap
+            </h2>
+            <div
+              class="h-1 w-24 bg-vikes-green-neon mx-auto mt-4 rounded-full shadow-[0_0_15px_rgba(0,255,127,0.8)]"
+            ></div>
+          </div>
+
+          <div class="max-w-4xl mx-auto relative">
+            <!-- Vertical Line -->
+            <div
+              class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 md:-translate-x-1/2"
+            ></div>
+
+            <!-- Q1 2025 -->
+            <div
+              class="relative flex flex-col md:flex-row items-center justify-between mb-16 group"
+            >
+              <!-- Date (Left on desktop) -->
+              <div class="md:w-[45%] md:text-right mb-4 md:mb-0">
+                <h3 class="text-2xl font-bold text-vikes-green-neon">
+                  Q1 2025
+                </h3>
+                <p class="text-gray-400">Team Foundation & Research</p>
+              </div>
+
+              <!-- Dot -->
+              <div
+                class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-vikes-green-neon shadow-[0_0_10px_rgba(0,255,127,0.8)] z-10"
+              ></div>
+
+              <!-- Status (Right on desktop) -->
+              <div class="md:w-[45%] pl-8 md:pl-0">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded bg-vikes-green/20 text-vikes-green-neon text-sm border border-vikes-green-neon/50"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  Completed
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 2025 -->
+            <div
+              class="relative flex flex-col md:flex-row items-center justify-between mb-16 group"
+            >
+              <!-- Date (Right on desktop, swap order) -->
+              <div
+                class="md:w-[45%] md:order-2 md:text-left mb-4 md:mb-0 pl-8 md:pl-0"
+              >
+                <h3
+                  class="text-2xl font-bold text-white group-hover:text-vikes-green-neon transition-colors"
+                >
+                  Q1 2026
+                </h3>
+                <p class="text-gray-400">Manufacturing Phase Begins</p>
+              </div>
+
+              <!-- Dot -->
+              <div
+                class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-yellow-500 animate-pulse z-10"
+              ></div>
+
+              <!-- Status (Left on desktop) -->
+              <div class="md:w-[45%] md:order-1 md:text-right">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded bg-yellow-500/20 text-yellow-500 text-sm border border-yellow-500/50"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 animate-spin"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    />
+                  </svg>
+                  In Progress
+                </div>
+              </div>
+            </div>
+
+            <!-- Summer 2026 -->
+            <div
+              class="relative flex flex-col md:flex-row items-center justify-between group"
+            >
+              <!-- Date (Left on desktop) -->
+              <div class="md:w-[45%] md:text-right mb-4 md:mb-0">
+                <h3
+                  class="text-2xl font-bold text-gray-500 group-hover:text-white transition-colors"
+                >
+                  Summer 2026
+                </h3>
+                <p class="text-gray-500 group-hover:text-gray-300">
+                  Competition in Michigan
+                </p>
+              </div>
+
+              <!-- Dot -->
+              <div
+                class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full bg-gray-700 border border-gray-500 z-10"
+              ></div>
+
+              <!-- Status (Right on desktop) -->
+              <div class="md:w-[45%] pl-8 md:pl-0">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded bg-gray-800 text-gray-500 text-sm border border-gray-700"
+                >
+                  Upcoming
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: SPONSORSHIP TIERS (Pricing Table) -->
+      <section id="tiers" class="py-24 bg-secondary-bg">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-white"
+            >
+              Sponsorship Tiers
+            </h2>
+            <div
+              class="h-1 w-24 bg-vikes-green-neon mx-auto mt-4 rounded-full shadow-[0_0_15px_rgba(0,255,127,0.8)]"
+            ></div>
+          </div>
+
+          <!-- Tiers Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Bronze -->
+            <div
+              class="bg-primary-bg rounded-xl border border-white/10 p-8 hover:border-white/30 transition-all hover:scale-105"
+            >
+              <h3 class="text-2xl font-bold text-white mb-2">Bronze</h3>
+              <p class="text-3xl font-black text-white mb-6">$1,000</p>
+              <ul class="space-y-3 mb-8 text-gray-400 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Tax Deductible
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Small Logo on Car
+                </li>
+                <li class="flex items-center gap-2 opacity-50">
+                  <span class="text-gray-600">✗</span> Website Feature
+                </li>
+                <li class="flex items-center gap-2 opacity-50">
+                  <span class="text-gray-600">✗</span> Recruiting Event
+                </li>
+              </ul>
+              <a
+                href="mailto:team@vikingsformula.com?subject=Bronze Sponsorship Inquiry"
+                class="block w-full py-3 border border-white/20 rounded-lg text-white font-bold text-center hover:bg-white/10 transition-colors uppercase tracking-widest text-sm"
+                >Select</a
+              >
+            </div>
+
+            <!-- Silver -->
+            <div
+              class="bg-primary-bg rounded-xl border border-white/10 p-8 hover:border-white/30 transition-all hover:scale-105"
+            >
+              <h3 class="text-2xl font-bold text-gray-300 mb-2">Silver</h3>
+              <p class="text-3xl font-black text-white mb-6">$2,500</p>
+              <ul class="space-y-3 mb-8 text-gray-400 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Tax Deductible
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Medium Logo on
+                  Car
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Website Feature
+                </li>
+                <li class="flex items-center gap-2 opacity-50">
+                  <span class="text-gray-600">✗</span> Recruiting Event
+                </li>
+              </ul>
+              <a
+                href="mailto:team@vikingsformula.com?subject=Silver Sponsorship Inquiry"
+                class="block w-full py-3 border border-white/20 rounded-lg text-white font-bold text-center hover:bg-white/10 transition-colors uppercase tracking-widest text-sm"
+                >Select</a
+              >
+            </div>
+
+            <!-- Gold (Featured) -->
+            <div
+              class="bg-gradient-to-b from-vikes-green/20 to-primary-bg rounded-xl border border-vikes-green-neon p-8 relative transform md:-translate-y-4 hover:scale-105 transition-all shadow-[0_0_30px_rgba(0,255,127,0.2)]"
+            >
+              <div
+                class="absolute top-0 right-0 bg-vikes-green-neon text-black text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg uppercase tracking-wide"
+              >
+                Recommended
+              </div>
+              <h3 class="text-2xl font-bold text-vikes-green-neon mb-2">
+                Gold
+              </h3>
+              <p class="text-3xl font-black text-white mb-6">$5,000</p>
+              <ul class="space-y-3 mb-8 text-gray-300 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Tax Deductible
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Large Logo on Car
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Feature & Link
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Resume Book
+                  Access
+                </li>
+              </ul>
+              <a
+                href="mailto:team@vikingsformula.com?subject=Gold Sponsorship Inquiry"
+                class="block w-full py-3 bg-vikes-green-neon text-black rounded-lg font-bold text-center hover:bg-white transition-colors uppercase tracking-widest text-sm shadow-lg"
+                >Select</a
+              >
+            </div>
+
+            <!-- Platinum -->
+            <div
+              class="bg-primary-bg rounded-xl border border-white/10 p-8 hover:border-white/30 transition-all hover:scale-105"
+            >
+              <h3 class="text-2xl font-bold text-white mb-2">Platinum</h3>
+              <p class="text-3xl font-black text-white mb-6">$7,500+</p>
+              <ul class="space-y-3 mb-8 text-gray-400 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Tax Deductible
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> XL Logo on Car
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Prime Placement
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-vikes-green-neon">✓</span> Unveiling Event
+                </li>
+              </ul>
+              <a
+                href="mailto:team@vikingsformula.com?subject=Platinum Sponsorship Inquiry"
+                class="block w-full py-3 border border-white/20 rounded-lg text-white font-bold text-center hover:bg-white/10 transition-colors uppercase tracking-widest text-sm"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: THE BUDGET (Transparency) -->
+      
+    </main>
+
+    <!-- FOOTER WITH DONATION CTA -->
+    <footer
+      class="bg-black py-16 border-t border-white/10 relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-vikes-green/5 bg-[url('/img/grid.svg')] opacity-20"
+      ></div>
+
+      <div class="container mx-auto px-6 relative z-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">
+          Ready to support the future?
+        </h2>
+
+        <div
+          class="flex flex-col md:flex-row justify-center gap-8 items-center mb-12"
+        >
+          <a
+            href="https://giving.csuohio.edu/"
+            target="_blank"
+            class="px-8 py-4 bg-vikes-green-neon text-black font-black text-xl uppercase tracking-widest rounded transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,127,0.6)]"
+          >
+            Donate Online
+          </a>
+          <div class="text-left">
+            <p class="text-gray-400 mb-1">Or contact us directly:</p>
+            <a
+              href="mailto:team@vikingsformula.com"
+              class="text-xl text-white font-bold hover:text-vikes-green-neon transition-colors"
+              >team@vikingsformula.com</a
+            >
+          </div>
+        </div>
+
+        <p class="text-gray-600 text-sm">
+          © 2025 Formula Vikes Racing - Cleveland State University
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Data for Team Chart
+      const teamCtx = document.getElementById("teamChart").getContext("2d");
+      new Chart(teamCtx, {
+        type: "doughnut",
+        data: {
+          labels: ["Mechanical", "Electrical", "CS & Chemical"],
+          datasets: [
+            {
+              data: [62, 24, 14],
+              backgroundColor: [
+                "#016b4d", // Vikes Green
+                "#3b82f6", // Blue
+                "#a855f7", // Purple
+              ],
+              borderWidth: 0,
+              hoverOffset: 10,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "bottom",
+              labels: {
+                color: "#9CA3AF",
+                font: { family: "Inter" },
+              },
+            },
+          },
+          cutout: "70%",
+        },
+      });
+
+      // Data for Budget Chart
+      const budgetCtx = document.getElementById("budgetChart").getContext("2d");
+      new Chart(budgetCtx, {
+        type: "pie",
+        data: {
+          labels: ["Mechanical Parts", "Electrical Systems", "Logistics/Comp"],
+          datasets: [
+            {
+              data: [25000, 20000, 7000],
+              backgroundColor: ["#016b4d", "#00ff7f", "#ffffff"],
+              borderWidth: 0,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "right",
+              labels: {
+                color: "#9CA3AF",
+                font: { family: "Inter" },
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
+```

@@ -29,12 +29,6 @@ window.initialAppData = {
   ],
   departmentLeads: [
     {
-      name: "Ian Roth",
-      role: "Electrical HV Team Sub Lead",
-      image: "/Team Photos/ian.jpg",
-      id: "ian-roth"
-    },
-    {
       name: "Kevin Acuna",
       role: "Chassis Sub Lead",
       image: "/Team Photos/kevinheadshot1.jpg",
@@ -45,6 +39,12 @@ window.initialAppData = {
       role: "Electrical Lead",
       image: "/Team Photos/jhon.jpg",
       id: "john-quigley"
+    },
+    {
+      name: "Ian Roth",
+      role: "Electrical HV Team Sub Lead",
+      image: "/Team Photos/ian.jpg",
+      id: "ian-roth"
     },
     {
       name: "Andre Moncrief",
@@ -66,6 +66,12 @@ window.initialAppData = {
     }
   ],
   sponsors: [
+    {
+      name: "Cleveland Die and Manufacturing",
+      image: "/images/Gold/CDM_logo_and_name.png",
+      glowColor: "rgba(255,215,0,0.45)", // Gold
+      id: "cleveland-die"
+    },
     {
       name: "Tesla",
       image: "/images/Gold/Tesla.png",
@@ -126,6 +132,12 @@ window.initialAppData = {
       image: "/images/Bronze/r-e-warner.png",
       glowColor: "rgba(205,127,50,0.45)", // Bronze
       id: "re-warner"
+    },
+    {
+      name: "Royal Wire",
+      image: "/images/Bronze/royalwire.jpg",
+      glowColor: "rgba(205,127,50,0.45)", // Bronze
+      id: "royal-wire"
     },
     {
       name: "Cleveland State University",

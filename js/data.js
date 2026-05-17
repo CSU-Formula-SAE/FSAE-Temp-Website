@@ -11,13 +11,13 @@ window.initialAppData = {
     {
       name: "Brendon Vo",
       role: "Vice President & Suspension Lead",
-      image: "/Team Photos/brendon.jpg",
+      image: "/Team Photos/Brendon.jpg",
       id: "brendon-vo"
     },
     {
       name: "Stefan Lechintan",
       role: "Finance",
-      image: "/Team Photos/stefan.jpg",
+      image: "/Team Photos/Stefan.jpg",
       id: "stefan-lechintan"
     },
     {

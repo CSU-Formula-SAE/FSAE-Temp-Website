@@ -3,67 +3,67 @@
 window.initialAppData = {
   leadership: [
     {
-      name: "Zak Etzel",
-      role: "President",
-      image: "/Team Photos/zak.jpg",
-      id: "zak-etzel"
-    },
-    {
       name: "Brendon Vo",
-      role: "Vice President & Suspension Lead",
-      image: "/Team Photos/Brendon.jpg",
+      role: "President, Suspension/Brakes Lead",
+      image: "/Team Photos/brendonvo.jpg",
       id: "brendon-vo"
     },
     {
-      name: "Stefan Lechintan",
-      role: "Finance",
-      image: "/Team Photos/Stefan.jpg",
-      id: "stefan-lechintan"
+      name: "Kevin Acuna",
+      role: "Vice President, Project Manager, Powertrain Lead",
+      image: "/Team Photos/kevinacuna.jpg",
+      id: "kevin acuna"
+    },
+    {
+      name: "Matthew Klem",
+      role: "Treasurer",
+      image: "/Team Photos/matthewklem.jpg",
+      id: "matthew-klem"
     },
     {
       name: "Beyza Inal",
       role: "Secretary",
-      image: "/Team Photos/beyza.jpg",
+      image: "/Team Photos/beyzainal.jpg",
       id: "beyza-inal"
     }
   ],
   departmentLeads: [
     {
-      name: "Kevin Acuna",
+      name: "Tyler Davis",
       role: "Chassis Sub Lead",
-      image: "/Team Photos/kevinheadshot1.jpg",
-      id: "kevin-acuna"
+      image: "/Team Photos/tylerdavis.jpg",
+      id: "tyler-davis"
     },
     {
       name: "John Quigley",
       role: "Electrical Lead",
-      image: "/Team Photos/jhon.jpg",
+      image: "/Team Photos/johnquigley.jpg",
       id: "john-quigley"
     },
     {
       name: "Ian Roth",
-      role: "Electrical HV Team Sub Lead",
-      image: "/Team Photos/ian.jpg",
+      role: "Tractive Battery Lead",
+      image: "/Team Photos/ianroth.jpg",
       id: "ian-roth"
     },
     {
       name: "Andre Moncrief",
       role: "Electrical LV Team Lead",
-      image: "/Team Photos/andre.jpg",
+      image: "/Team Photos/andremoncrief.jpg",
       id: "andre-moncrief"
     },
     {
-      name: "Scott Whalen",
-      role: "Powertrain Lead",
-      image: "/Team Photos/scott.jpg",
-      id: "scott-whalen"
+      name: "Kyle Urbanowicz",
+      role: "Electrical HV Indicators Lead",
+      image: "/Team Photos/kyleurbanowicz.jpg",
+      id: "kyle-urbanowicz"
     },
     {
       name: "Kaysar Mohamed",
-      role: "Web Dev Lead",
+      role: "Web Development",
       image: "/Team Photos/kaysar.webp",
       id: "kaysar-mohamed"
-    }
+    },
   ],
   sponsors: [
     {
@@ -85,6 +85,12 @@ window.initialAppData = {
       id: "alro-steel"
     },
     {
+      name: "DTI",
+      image: "/images/Bronze/DTI.png",
+      glowColor: "rgba(192,192,192,0.45)", // Silver
+      id: "dti"
+    },
+    {
       name: "Ansys",
       image: "/images/Bronze/ansys-logo.svg",
       glowColor: "rgba(205,127,50,0.45)", // Bronze
@@ -95,12 +101,6 @@ window.initialAppData = {
       image: "/images/Bronze/Calspan_-_Red_and_Black.png ",
       glowColor: "rgba(205,127,50,0.45)", // Bronze
       id: "calspan"
-    },
-    {
-      name: "DTI",
-      image: "/images/Bronze/DTI.png",
-      glowColor: "rgba(205,127,50,0.45)", // Bronze
-      id: "dti"
     },
     {
       name: "EMRAX",
@@ -145,9 +145,5 @@ window.initialAppData = {
       glowColor: "rgba(0,255,160,0.45)",
       id: "csu"
     }
-  ],
-  updates: [
-    "/Team Photos/ian.jpg",
-    "/Team Photos/kevinheadshot1.jpg"
   ]
 };

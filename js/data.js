@@ -5,25 +5,25 @@ window.initialAppData = {
     {
       name: "Brendon Vo",
       role: "President, Suspension/Brakes Lead",
-      image: "/Team Photos/brendonvo.jpg",
+      image: "/Team Photos/brendonvo.JPG",
       id: "brendon-vo"
     },
     {
       name: "Kevin Acuna",
       role: "Vice President, Project Manager, Powertrain Lead",
-      image: "/Team Photos/kevinacuna.jpg",
+      image: "/Team Photos/kevinacuna.JPG",
       id: "kevin acuna"
     },
     {
       name: "Matthew Klem",
       role: "Treasurer",
-      image: "/Team Photos/matthewklem.jpg",
+      image: "/Team Photos/matthewklem.JPG",
       id: "matthew-klem"
     },
     {
       name: "Beyza Inal",
       role: "Secretary",
-      image: "/Team Photos/beyzainal.jpg",
+      image: "/Team Photos/beyzainal.JPG",
       id: "beyza-inal"
     }
   ],
@@ -31,31 +31,31 @@ window.initialAppData = {
     {
       name: "Tyler Davis",
       role: "Chassis Sub Lead",
-      image: "/Team Photos/tylerdavis.jpg",
+      image: "/Team Photos/tylerdavis.JPG",
       id: "tyler-davis"
     },
     {
       name: "John Quigley",
       role: "Electrical Lead",
-      image: "/Team Photos/johnquigley.jpg",
+      image: "/Team Photos/johnquigley.JPG",
       id: "john-quigley"
     },
     {
       name: "Ian Roth",
       role: "Tractive Battery Lead",
-      image: "/Team Photos/ianroth.jpg",
+      image: "/Team Photos/ianroth.JPG",
       id: "ian-roth"
     },
     {
       name: "Andre Moncrief",
       role: "Electrical LV Team Lead",
-      image: "/Team Photos/andremoncrief.jpg",
+      image: "/Team Photos/andremoncrief.JPG",
       id: "andre-moncrief"
     },
     {
       name: "Kyle Urbanowicz",
       role: "Electrical HV Indicators Lead",
-      image: "/Team Photos/kyleurbanowicz.jpg",
+      image: "/Team Photos/kyleurbanowicz.JPG",
       id: "kyle-urbanowicz"
     },
     {

@@ -55,7 +55,7 @@ window.initialAppData = {
     {
       name: "Kyle Urbanowicz",
       role: "Electrical HV Indicators Lead",
-      image: "/Team Photos/kyleurbanowicz.JPG",
+      image: "/Team Photos/kyleurbanowicz.jpg",
       id: "kyle-urbanowicz"
     },
     {

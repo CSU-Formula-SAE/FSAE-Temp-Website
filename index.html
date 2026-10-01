@@ -34,6 +34,71 @@
       background-size: 30px 30px;
       background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
     }
+
+    /* Technical Motorsport Grid Texture */
+    .motorsport-grid {
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(1, 107, 77, 0.12) 0%, transparent 60%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    /* Swiper Navigation & Pagination Controls */
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #00ff7f !important;
+      background: rgba(10, 10, 10, 0.8) !important;
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 9999px !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      backdrop-filter: blur(8px) !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+      background: #00ff7f !important;
+      color: #000 !important;
+      box-shadow: 0 0 25px rgba(0, 255, 127, 0.6) !important;
+      border-color: #00ff7f !important;
+      transform: scale(1.06);
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 16px !important;
+      font-weight: 900 !important;
+    }
+
+    .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.35) !important;
+      opacity: 1 !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #00ff7f !important;
+      width: 24px !important;
+      border-radius: 9999px !important;
+      box-shadow: 0 0 15px rgba(0, 255, 127, 0.6) !important;
+    }
+
+    /* Instagram Embed Framing */
+    .ig-embed-container {
+      border-radius: 14px;
+      overflow: hidden;
+      background: #121212;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .ig-embed-container iframe {
+      border-radius: 12px !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      border: none !important;
+    }
   </style>
 
   <!-- Tailwind custom theme config -->
@@ -150,47 +215,310 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="bg-primary-bg"></section>
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-primary-bg">
-      <!-- About text + team photo -->
-      <div class="py-24 md:py-32 px-6 lg:px-12 flex justify-center">
-        <div class="max-w-xl text-center md:text-left">
-          <h2 class="text-5xl font-bold mb-6 text-vikes-green-neon text-center md:text-left">
-            About Us
-          </h2>
-
-          <p class="text-xl text-gray-400 leading-relaxed">
-            Formula Vikes Racing is Cleveland State University's Formula SAE
-            team. We design, build, and compete with a Formula-style race
-            car at the international SAE competition.
-          </p>
-
-          <img src="images/saeteamphoto.jpg" alt="Team Photo"
-            class="w-full h-96 rounded-lg object-cover shadow-[0_0_30px_rgba(0,255,127,0.1)] mt-12 border border-white/10" />
-        </div>
+    <!-- ABOUT & UPDATES SECTION -->
+    <section id="about"
+      class="relative py-24 lg:py-32 bg-primary-bg overflow-hidden border-b border-white/5 motorsport-grid">
+      <!-- Ambient Backlight Accents -->
+      <div class="absolute top-1/4 -left-48 w-96 h-96 bg-vikes-green/20 rounded-full blur-[140px] pointer-events-none">
+      </div>
+      <div
+        class="absolute bottom-10 -right-48 w-96 h-96 bg-vikes-green-neon/10 rounded-full blur-[150px] pointer-events-none">
+      </div>
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-950/20 rounded-full blur-[160px] pointer-events-none">
       </div>
 
-      <!-- Updates slideshow using Swiper -->
-      <div class="bg-secondary-bg py-24 md:py-32 px-6 lg:px-12 flex justify-center border-l border-white/5">
-        <div class="max-w-xl w-full">
-          <h3 class="text-5xl font-bold mb-6 text-white text-center">
-            Updates
-          </h3>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <!-- Section Title Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] bg-vikes-green/20 text-vikes-green-neon border border-vikes-green-neon/30 shadow-[0_0_20px_rgba(0,255,127,0.15)] mb-4 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-vikes-green-neon animate-pulse"></span>
+            Formula Vikes Racing // CSU
+          </div>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white">
+            Engineering.
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-vikes-green-neon via-emerald-400 to-white">Trackside
+              Passion.</span>
+          </h2>
+          <p class="text-base sm:text-lg text-gray-400 mt-4 leading-relaxed font-normal">
+            Cleveland State University's premier collegiate Formula SAE racing team — designing, simulating, and
+            fabricating open-wheel formula race cars for competition.
+          </p>
+        </div>
 
-          <div class="swiper mySwiper w-full h-150 rounded-lg shadow-lg">
-            <div class="swiper-wrapper">
-              <!-- Dynamic Content -->
-               <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dcv7xipNC5q/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/Dcv7xipNC5q/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/Dcv7xipNC5q/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by @vikingsformula</a></p></div></blockquote>
-<script async src="//www.instagram.com/embed.js"></script>
+        <!-- 2-Column Balanced Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+
+          <!-- LEFT CARD: About Us -->
+          <div
+            class="bg-secondary-bg/80 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between shadow-[0_10px_40px_rgba(0,0,0,0.6)] relative group hover:border-vikes-green-neon/40 transition-all duration-500 overflow-hidden">
+            <!-- Subtle Hover Corner Glow -->
+            <div
+              class="absolute -top-24 -left-24 w-48 h-48 bg-vikes-green/30 rounded-full blur-3xl pointer-events-none group-hover:bg-vikes-green-neon/20 transition-all duration-500">
             </div>
 
-            <div class="swiper-button-next text-white"></div>
-            <div class="swiper-button-prev text-white"></div>
+            <div>
+              <!-- Card Meta Badge -->
+              <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                <span
+                  class="text-xs font-mono uppercase tracking-widest text-vikes-green-neon font-bold flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-vikes-green-neon"></span> The Mission & Team
+                </span>
+                <span class="font-mono text-xs text-gray-500 tracking-wider uppercase">FSAE // EST. CSU</span>
+              </div>
+
+              <h3 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-4">
+                About <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-vikes-green-neon to-emerald-400">Formula
+                  Vikes</span>
+              </h3>
+
+              <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+                Formula Vikes Racing is Cleveland State University’s Formula SAE collegiate design team based in the
+                Washkewicz College of Engineering. We are an interdisciplinary collective of dedicated student engineers
+                designing, fabricating, testing, and racing high-performance open-wheel Formula-style race cars on the
+                world stage.
+              </p>
+
+              <!-- Quick Telemetry Stat Cards -->
+              <div class="grid grid-cols-3 gap-3 my-6">
+                <div
+                  class="bg-primary-bg/70 border border-white/10 rounded-xl p-3.5 text-center group-hover:border-vikes-green-neon/30 transition-colors">
+                  <span class="block text-2xl sm:text-3xl font-black text-vikes-green-neon font-mono">30+</span>
+                  <span
+                    class="text-[11px] sm:text-xs uppercase tracking-wider text-gray-400 font-semibold mt-0.5 block">Engineers</span>
+                </div>
+                <div
+                  class="bg-primary-bg/70 border border-white/10 rounded-xl p-3.5 text-center group-hover:border-vikes-green-neon/30 transition-colors">
+                  <span class="block text-2xl sm:text-3xl font-black text-white font-mono">100%</span>
+                  <span
+                    class="text-[11px] sm:text-xs uppercase tracking-wider text-gray-400 font-semibold mt-0.5 block">Student
+                    Built</span>
+                </div>
+                <div
+                  class="bg-primary-bg/70 border border-white/10 rounded-xl p-3.5 text-center group-hover:border-vikes-green-neon/30 transition-colors">
+                  <span class="block text-2xl sm:text-3xl font-black text-vikes-green-neon font-mono">FSAE</span>
+                  <span
+                    class="text-[11px] sm:text-xs uppercase tracking-wider text-gray-400 font-semibold mt-0.5 block">
+
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Photo Viewport with Racing HUD -->
+            <div
+              class="relative rounded-2xl overflow-hidden border border-white/10 group/img shadow-[0_0_30px_rgba(0,0,0,0.5)] mt-4">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent z-10 pointer-events-none">
+              </div>
+
+              <img src="images/saeteamphoto.jpg" alt="Formula Vikes Racing Team"
+                class="w-full h-64 sm:h-72 object-cover transform group-hover/img:scale-105 transition-transform duration-700 ease-out" />
+
+
+
+              <div
+                class="absolute bottom-3 left-3 right-3 z-20 flex justify-between items-center text-xs text-gray-300">
+                <span class="font-medium text-white drop-shadow">Washkewicz College of Engineering</span>
+                <a href="#team"
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-vikes-green/80 hover:bg-vikes-green-neon hover:text-black text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+                  Meet The Team →
+                </a>
+              </div>
+            </div>
           </div>
+
+          <!-- RIGHT CARD: Updates & Social Hub -->
+          <div
+            class="bg-secondary-bg/80 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between shadow-[0_10px_40px_rgba(0,0,0,0.6)] relative group hover:border-vikes-green-neon/40 transition-all duration-500 overflow-hidden">
+            <!-- Subtle Hover Corner Glow -->
+            <div
+              class="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none group-hover:bg-vikes-green-neon/20 transition-all duration-500">
+            </div>
+
+            <div>
+              <!-- Card Meta Badge -->
+              <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+                <span
+                  class="text-xs font-mono uppercase tracking-widest text-vikes-green-neon font-bold flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live Trackside Feed
+                </span>
+                <a href="https://www.instagram.com/vikingsformula/" target="_blank"
+                  class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-all">
+                  <img src="images/Soical_icon/Instagram_Glyph_Gradient.svg" class="w-3.5 h-3.5" alt="IG" />
+                  <span>@vikingsformula</span>
+                  <span class="text-vikes-green-neon">↗</span>
+                </a>
+              </div>
+
+              <h3 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-2">
+                Latest <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Updates</span>
+              </h3>
+
+              <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                Track our journey from garage fabrication to competition day with real-time news, recruitments, and
+                paddock testing updates.
+              </p>
+
+              <!-- Interactive Tab Switcher -->
+              <div class="flex items-center gap-2 p-1.5 bg-black/60 rounded-xl border border-white/10 mt-5 mb-5">
+                <button id="tab-instagram" type="button"
+                  class="flex-1 py-2 px-3 sm:px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-vikes-green-neon text-black shadow-[0_0_15px_rgba(0,255,127,0.3)]">
+                  <img src="images/Soical_icon/Instagram_Glyph_Gradient.svg" class="w-4 h-4" alt="IG" />
+                  <span>Instagram Post</span>
+                </button>
+                <button id="tab-gallery" type="button"
+                  class="flex-1 py-2 px-3 sm:px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-gray-400 hover:text-white">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                  <span>Build Gallery</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- TAB 1: Instagram Embed Container (Phone Frame Styled) -->
+            <div id="view-instagram" class="flex flex-col items-center w-full">
+              <div
+                class="w-full max-w-[460px] bg-black/70 rounded-2xl border border-white/10 p-3 sm:p-4 shadow-[0_10px_30px_rgba(0,0,0,0.8)] relative">
+                <!-- Phone Console Header -->
+                <div class="flex items-center justify-between px-2 pb-3 mb-2 border-b border-white/10">
+                  <div class="flex items-center gap-2.5">
+                    <div
+                      class="w-8 h-8 rounded-full bg-vikes-green/40 border border-vikes-green-neon/50 flex items-center justify-center text-xs font-black text-vikes-green-neon">
+                      VF
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-1.5 leading-none">
+                        <span class="text-xs font-bold text-white">vikingsformula</span>
+                        <svg class="w-3.5 h-3.5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd"
+                            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <span class="text-[10px] text-gray-400">Formula SAE • Cleveland State</span>
+                    </div>
+                  </div>
+                  <a href="https://www.instagram.com/vikingsformula/" target="_blank"
+                    class="px-3 py-1 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-500 hover:brightness-110 text-white text-[11px] font-bold rounded-full shadow-[0_0_15px_rgba(219,39,119,0.3)] transition-all">
+                    Follow
+                  </a>
+                </div>
+
+                <!-- Instagram Embed Wrapper (Styled & Framed) -->
+                <div class="ig-embed-container w-full overflow-hidden flex justify-center">
+                  <blockquote class="instagram-media"
+                    data-instgrm-permalink="https://www.instagram.com/p/DZ6TeI2DqtJ/?utm_source=ig_web_button_share_sheet"
+                    data-instgrm-version="14"
+                    style="background:#121212; border:0; border-radius:12px; margin:0 auto; max-width:440px; min-width:280px; padding:0; width:100%;">
+                    <div style="padding:16px;">
+                      <a href="https://www.instagram.com/p/DZ6TeI2DqtJ/?img_index=2&stkn=YjQ1dDlydHBwdG85"
+                        style="background:#121212; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                        target="_blank">
+                        <div style="display:flex; flex-direction:row; align-items:center;">
+                          <div
+                            style="background-color:#262626; border-radius:50%; flex-grow:0; height:40px; margin-right:14px; width:40px;">
+                          </div>
+                          <div style="display:flex; flex-direction:column; flex-grow:1; justify-content:center;">
+                            <div
+                              style="background-color:#262626; border-radius:4px; flex-grow:0; height:14px; margin-bottom:6px; width:100px;">
+                            </div>
+                            <div
+                              style="background-color:#262626; border-radius:4px; flex-grow:0; height:14px; width:60px;">
+                            </div>
+                          </div>
+                        </div>
+                        <div style="padding:19% 0;"></div>
+                        <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                          <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                            xmlns="https://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g transform="translate(-511.000000, -20.000000)" fill="#00ff7f">
+                                <path
+                                  d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                </path>
+                              </g>
+                            </g>
+                          </svg>
+                        </div>
+                        <div style="padding-top:8px;">
+                          <div style="color:#00ff7f; font-family:Arial,sans-serif; font-size:14px; font-weight:600;">
+                            View this post on Instagram</div>
+                        </div>
+                      </a>
+                    </div>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: Build Gallery Slideshow (Swiper) -->
+            <div id="view-gallery" class="hidden flex flex-col w-full">
+              <div
+                class="swiper mySwiper w-full h-80 sm:h-96 rounded-2xl shadow-2xl relative overflow-hidden border border-white/10">
+                <div class="swiper-wrapper">
+                  <!-- Dynamic Content populated by app.js or defaults -->
+                  <div class="swiper-slide relative rounded-xl overflow-hidden group/slide">
+                    <img src="images/HeroPic.JPG"
+                      class="w-full h-full object-cover transform group-hover/slide:scale-105 transition-transform duration-700"
+                      alt="Formula Vikes Car on Track" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+                      <span
+                        class="text-vikes-green-neon font-bold tracking-wider uppercase bg-black/60 backdrop-blur px-2.5 py-1 rounded border border-vikes-green-neon/30">
+                        Milestone // On-Track Testing
+                      </span>
+                      <span class="text-gray-300 drop-shadow">CSU Formula SAE</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide relative rounded-xl overflow-hidden group/slide">
+                    <img src="images/fsaeemodelad_indoors_3.webp"
+                      class="w-full h-full object-cover transform group-hover/slide:scale-105 transition-transform duration-700"
+                      alt="FSAE CAD Chassis Model" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+                      <span
+                        class="text-vikes-green-neon font-bold tracking-wider uppercase bg-black/60 backdrop-blur px-2.5 py-1 rounded border border-vikes-green-neon/30">
+                        Milestone // CAD Chassis Design
+                      </span>
+                      <span class="text-gray-300 drop-shadow">Engineering Division</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide relative rounded-xl overflow-hidden group/slide">
+                    <img src="images"
+                      class="w-full h-full object-cover transform group-hover/slide:scale-105 transition-transform duration-700"
+                      alt="Formula Vikes Team" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+                      <span
+                        class="text-vikes-green-neon font-bold tracking-wider uppercase bg-black/60 backdrop-blur px-2.5 py-1 rounded border border-vikes-green-neon/30">
+                        Milestone // Engineering Assembly
+                      </span>
+                      <span class="text-gray-300 drop-shadow">Washkewicz College</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Swiper Navigation & Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination !bottom-3"></div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
-    </div>
+      <!-- Instagram embed async script -->
+      <script async src="//www.instagram.com/embed.js"></script>
     </section>
 
 
@@ -284,7 +612,8 @@
               <span
                 class="text-red-500 font-bold uppercase tracking-[0.2em] text-sm md:text-base mb-2 block drop-shadow-md">Founding
                 Sponsor</span>
-              <h3 class="text-white text-3xl md:text-5xl font-black uppercase tracking-tighter drop-shadow-xl">The Mark Sturdevant '19 Endowed Scholarship</h3>
+              <h3 class="text-white text-3xl md:text-5xl font-black uppercase tracking-tighter drop-shadow-xl">The Mark
+                Sturdevant '19 Endowed Scholarship</h3>
             </div>
           </div>
         </div>
@@ -358,12 +687,58 @@
   <script src="js/app.js"></script>
 
   <script>
+    // Initialize Swiper for Build Gallery with smooth transitions
     const swiper = new Swiper(".mySwiper", {
       loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    });
+    window.mySwiperInstance = swiper;
+
+    // Interactive Tab Switcher for Updates section
+    document.addEventListener("DOMContentLoaded", function () {
+      const tabIg = document.getElementById("tab-instagram");
+      const tabGallery = document.getElementById("tab-gallery");
+      const viewIg = document.getElementById("view-instagram");
+      const viewGallery = document.getElementById("view-gallery");
+
+      if (tabIg && tabGallery && viewIg && viewGallery) {
+        tabIg.addEventListener("click", function () {
+          // Highlight IG tab
+          tabIg.className = "flex-1 py-2 px-3 sm:px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-vikes-green-neon text-black shadow-[0_0_15px_rgba(0,255,127,0.3)]";
+          tabGallery.className = "flex-1 py-2 px-3 sm:px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-gray-400 hover:text-white";
+
+          viewIg.classList.remove("hidden");
+          viewGallery.classList.add("hidden");
+
+          if (window.instgrm && window.instgrm.Embeds) {
+            window.instgrm.Embeds.process();
+          }
+        });
+
+        tabGallery.addEventListener("click", function () {
+          // Highlight Gallery tab
+          tabGallery.className = "flex-1 py-2 px-3 sm:px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-vikes-green-neon text-black shadow-[0_0_15px_rgba(0,255,127,0.3)]";
+          tabIg.className = "flex-1 py-2 px-3 sm:px-4 rounded-lg text-xs font-bold uppercase tracking-wider transition-all flex items-center justify-center gap-2 text-gray-400 hover:text-white";
+
+          viewGallery.classList.remove("hidden");
+          viewIg.classList.add("hidden");
+
+          if (window.mySwiperInstance) {
+            window.mySwiperInstance.update();
+          }
+        });
+      }
     });
   </script>
 </body>

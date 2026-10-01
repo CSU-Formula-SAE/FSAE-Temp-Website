@@ -110,16 +110,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderUpdates(images) {
         const container = document.querySelector('.swiper-wrapper');
         if (!container) return;
-        container.innerHTML = images.map(img => `
-            <div class="swiper-slide">
-                <img src="${img}" class="w-full h-full object-cover" />
+        if (!images || !Array.isArray(images) || images.length === 0) return;
+        container.innerHTML = images.map((img, idx) => `
+            <div class="swiper-slide relative rounded-xl overflow-hidden group/slide">
+                <img src="${img}" class="w-full h-80 sm:h-96 object-cover transform group-hover/slide:scale-105 transition-transform duration-700" alt="Update ${idx + 1}" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono">
+                    
+                    <span class="text-gray-300 drop-shadow">CSU Formula SAE</span>
+                </div>
             </div>
         `).join('');
 
-        // Re-init swiper if needed, though usually it handles DOM updates if configured, 
-        // but safe to update loop here if we had access to the instance. 
-        // For now, assuming Swiper will handle it or simpler re-instantiation might be needed if broken.
-        // Actually, destructing and recreating swiper might be safest if dynamic updates happen often.
         if (window.mySwiperInstance) {
             window.mySwiperInstance.update();
         }

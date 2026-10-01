@@ -145,5 +145,14 @@ window.initialAppData = {
       glowColor: "rgba(0,255,160,0.45)",
       id: "csu"
     }
+  ],
+  // This is for the Update Section of the website
+  updates: [
+    "images/UpdatePhoto/LDW_0782.JPG",
+    "images/UpdatePhoto/LDW_0792.JPG",
+    "images/UpdatePhoto/LDW_0907.JPG",
+    "images/UpdatePhoto/LDW_0913.JPG",
+    "images/UpdatePhoto/LDW_1056.JPG",
+    "images/UpdatePhoto/LDW_1095.JPG"
   ]
 };

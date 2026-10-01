@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "sync-photos": "node sync-photos.js",
+    "watch-photos": "node sync-photos.js --watch"
+  },
   "dependencies": {
     "tailwindcss": "^4.1.16"
   }

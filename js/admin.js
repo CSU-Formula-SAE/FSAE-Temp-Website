@@ -144,11 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function createUpdateRow(url, index) {
         return `
              <div class="flex gap-4 items-center bg-primary-bg p-4 rounded border border-white/5" data-type="updates" data-index="${index}">
-                 <input type="text" value="${url}" placeholder="Image URL / Path" class="flex-1 bg-black/50 border border-white/10 p-2 rounded text-white item-url" />
-                 <div class="w-24 h-16 bg-black/50 rounded overflow-hidden drop-zone relative cursor-pointer border-2 border-transparent hover:border-vikes-green-neon transition-all" title="Drag & Drop Image Here">
-                    <img src="${url}" class="w-full h-full object-cover pointer-events-none" />
-                    <div class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity text-xs text-white text-center pointer-events-none">Drop Image</div>
-                </div>
+                 <div class="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/30 flex items-center justify-center shrink-0">
+                     <img src="images/Soical_icon/Instagram_Glyph_Gradient.svg" class="w-5 h-5" alt="Instagram" />
+                 </div>
+                 <input type="text" value="${url}" placeholder="Instagram Post Link (https://www.instagram.com/p/...)" class="flex-1 bg-black/50 border border-white/10 p-2.5 rounded text-white text-sm item-url focus:border-vikes-green-neon outline-none" />
+                 <a href="${url}" target="_blank" class="text-xs text-vikes-green-neon hover:underline shrink-0 px-2.5 py-1.5 rounded bg-white/5 border border-white/10 font-mono flex items-center gap-1">Test Link ↗</a>
                  <button class="text-red-500 hover:text-red-300 font-bold delete-btn px-2">X</button>
              </div>
         `;
@@ -175,12 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function addDragAndDropListeners() {
         document.querySelectorAll('.drop-zone').forEach(zone => {
-            // Find Drop Zone Input
-            // The input is in the previous sibling (wrapper) .flex-1 -> children
-            // Actually, we can just find the closest row and search within it
             const row = zone.closest('div[data-type]');
-            // Use querySelector to find the input that holds the image URL
-            // For updates, it's .item-url, for others it's .item-image
             const input = row.querySelector('.item-image') || row.querySelector('.item-url');
             const img = zone.querySelector('img');
 
@@ -221,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (type === 'sponsors') {
             appData[type].push({ name: 'New Sponsor', image: 'https://placehold.co/200x100', glowColor: 'rgba(255,255,255,0.5)' });
         } else if (type === 'updates') {
-            appData.updates.push('https://placehold.co/600x400');
+            appData.updates.push('https://www.instagram.com/p/Dcv7xipNC5q/');
         }
         renderEditors(appData);
     }

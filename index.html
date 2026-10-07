@@ -208,9 +208,9 @@
           <a href="#about"
             class="inline-block px-8 py-3 bg-vikes-green-neon text-black font-black uppercase tracking-widest rounded hover:bg-white transition-all shadow-[0_0_20px_rgba(0,255,127,0.4)]">Learn
             More</a>
-          <a href="sponsor.html"
-            class="inline-block px-8 py-3 border border-vikes-green-neon text-vikes-green-neon font-black uppercase tracking-widest rounded hover:bg-vikes-green-neon hover:text-black transition-all">Become
-            a Sponsor</a>
+          <button type="button"
+            class="open-sponsor-modal-btn inline-block px-8 py-3 border border-vikes-green-neon text-vikes-green-neon font-black uppercase tracking-widest rounded hover:bg-vikes-green-neon hover:text-black transition-all cursor-pointer">Become
+            a Sponsor</button>
         </div>
       </div>
     </section>
@@ -239,8 +239,8 @@
           <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white">
             Engineering.
             <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-vikes-green-neon via-emerald-400 to-white">Trackside
-              Passion.</span>
+              class="text-transparent bg-clip-text bg-gradient-to-r from-vikes-green-neon via-emerald-400 to-white">Racing.
+              competition.</span>
           </h2>
           <p class="text-base sm:text-lg text-gray-400 mt-4 leading-relaxed font-normal">
             Cleveland State University's premier collegiate Formula SAE racing team — designing, simulating, and
@@ -266,7 +266,7 @@
                   class="text-xs font-mono uppercase tracking-widest text-vikes-green-neon font-bold flex items-center gap-2">
                   <span class="w-2 h-2 rounded-full bg-vikes-green-neon"></span> The Mission & Team
                 </span>
-                <span class="font-mono text-xs text-gray-500 tracking-wider uppercase">FSAE // EST. CSU</span>
+                <span class="font-mono text-xs text-gray-500 tracking-wider uppercase"></span>
               </div>
 
               <h3 class="text-3xl sm:text-4xl font-black uppercase tracking-tight text-white mb-4">
@@ -300,10 +300,9 @@
                 <div
                   class="bg-primary-bg/70 border border-white/10 rounded-xl p-3.5 text-center group-hover:border-vikes-green-neon/30 transition-colors">
                   <span class="block text-2xl sm:text-3xl font-black text-vikes-green-neon font-mono">FSAE</span>
-                  <span
-                    class="text-[11px] sm:text-xs uppercase tracking-wider text-gray-400 font-semibold mt-0.5 block">
-
-                  </span>
+                  <a href="https://www.sae.org/events/student/about/formula" target="_blank" rel="noopener noreferrer"
+                    class="text-[11px] sm:text-xs uppercase tracking-wider text-gray-400 hover:text-vikes-green-neon hover:underline font-semibold mt-0.5 block transition-colors">More
+                    info</a>
                 </div>
               </div>
             </div>
@@ -342,10 +341,7 @@
             <div>
               <!-- Card Meta Badge -->
               <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
-                <span
-                  class="text-xs font-mono uppercase tracking-widest text-vikes-green-neon font-bold flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Live Trackside Feed
-                </span>
+
                 <a href="https://www.instagram.com/vikingsformula/" target="_blank"
                   class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-all">
                   <img src="images/Soical_icon/Instagram_Glyph_Gradient.svg" class="w-3.5 h-3.5" alt="IG" />
@@ -567,36 +563,48 @@
 
         <!-- CTA to Become a Sponsor -->
         <div class="mb-16">
-          <a href="sponsor.html"
-            class="inline-block px-8 py-4 bg-vikes-green text-white font-bold text-xl uppercase tracking-widest rounded-lg hover:bg-white hover:text-black transition-all shadow-[0_0_20px_rgba(1,107,77,0.5)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
+          <button type="button"
+            class="open-sponsor-modal-btn inline-block px-8 py-4 bg-vikes-green text-white font-bold text-xl uppercase tracking-widest rounded-lg hover:bg-white hover:text-black transition-all shadow-[0_0_20px_rgba(1,107,77,0.5)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] cursor-pointer">
             Become a Sponsor
-          </a>
+          </button>
         </div>
 
         <!-- Sponsor Tiers -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto">
           <!-- Bronze -->
-          <div
-            class="group p-8 bg-secondary-bg border border-[#CD7F32]/30 rounded-xl shadow-[0_0_30px_-5px_rgba(205,127,50,0.3)] hover:shadow-[0_0_50px_rgba(205,127,50,0.6)] transition-all duration-300 cursor-pointer">
+          <div data-tier="bronze"
+            class="open-sponsor-modal-btn group p-8 bg-secondary-bg border border-[#CD7F32]/30 rounded-xl shadow-[0_0_30px_-5px_rgba(205,127,50,0.3)] hover:shadow-[0_0_50px_rgba(205,127,50,0.6)] hover:border-[#CD7F32] transition-all duration-300 cursor-pointer">
             <h3 class="text-3xl font-black text-[#CD7F32] uppercase tracking-widest drop-shadow-lg">Bronze</h3>
+            <span
+              class="text-xs text-gray-400 font-mono mt-2 block uppercase tracking-wider group-hover:text-white transition-colors">$1,000
+              Tier • View Details</span>
           </div>
 
           <!-- Silver -->
-          <div
-            class="group p-8 bg-secondary-bg border border-[#C0C0C0]/30 rounded-xl shadow-[0_0_30px_-5px_rgba(192,192,192,0.3)] hover:shadow-[0_0_50px_rgba(192,192,192,0.6)] transition-all duration-300 cursor-pointer">
+          <div data-tier="silver"
+            class="open-sponsor-modal-btn group p-8 bg-secondary-bg border border-[#C0C0C0]/30 rounded-xl shadow-[0_0_30px_-5px_rgba(192,192,192,0.3)] hover:shadow-[0_0_50px_rgba(192,192,192,0.6)] hover:border-[#C0C0C0] transition-all duration-300 cursor-pointer">
             <h3 class="text-3xl font-black text-[#C0C0C0] uppercase tracking-widest drop-shadow-lg">Silver</h3>
+            <span
+              class="text-xs text-gray-400 font-mono mt-2 block uppercase tracking-wider group-hover:text-white transition-colors">$2,500
+              Tier • View Details</span>
           </div>
 
           <!-- Gold -->
-          <div
-            class="group p-8 bg-secondary-bg border border-[#FFD700]/30 rounded-xl shadow-[0_0_30px_-5px_rgba(255,215,0,0.3)] hover:shadow-[0_0_50px_rgba(255,215,0,0.6)] transition-all duration-300 cursor-pointer">
+          <div data-tier="gold"
+            class="open-sponsor-modal-btn group p-8 bg-secondary-bg border border-[#FFD700]/30 rounded-xl shadow-[0_0_30px_-5px_rgba(255,215,0,0.3)] hover:shadow-[0_0_50px_rgba(255,215,0,0.6)] hover:border-[#FFD700] transition-all duration-300 cursor-pointer">
             <h3 class="text-3xl font-black text-[#FFD700] uppercase tracking-widest drop-shadow-lg">Gold</h3>
+            <span
+              class="text-xs text-gray-400 font-mono mt-2 block uppercase tracking-wider group-hover:text-white transition-colors">$5,000
+              Tier • View Details</span>
           </div>
 
           <!-- Platinum -->
-          <div
-            class="group p-8 bg-secondary-bg border border-white/30 rounded-xl shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.6)] transition-all duration-300 cursor-pointer">
+          <div data-tier="platinum"
+            class="open-sponsor-modal-btn group p-8 bg-secondary-bg border border-white/30 rounded-xl shadow-[0_0_30px_-5px_rgba(255,255,255,0.3)] hover:shadow-[0_0_50px_rgba(255,255,255,0.6)] hover:border-white transition-all duration-300 cursor-pointer">
             <h3 class="text-3xl font-black text-white uppercase tracking-widest drop-shadow-lg">Platinum</h3>
+            <span
+              class="text-xs text-gray-400 font-mono mt-2 block uppercase tracking-wider group-hover:text-white transition-colors">$7,500+
+              Tier • View Details</span>
           </div>
         </div>
 
@@ -740,6 +748,198 @@
         });
       }
     });
+  </script>
+
+  <!-- ========================================================================= -->
+  <!-- SPONSORSHIP MODAL POPUP -->
+  <!-- ========================================================================= -->
+  <div id="sponsor-modal"
+    class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300"
+    role="dialog" aria-modal="true" aria-labelledby="sponsor-modal-title">
+
+    <!-- Backdrop Overlay -->
+    <div id="sponsor-modal-backdrop"
+      class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 cursor-pointer"></div>
+
+    <!-- Modal Card Window -->
+    <div id="sponsor-modal-content"
+      class="relative w-full max-w-2xl bg-[#121212] border border-white/10 rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-all duration-300 flex flex-col max-h-[90vh]">
+
+      <!-- Top Accent Bar -->
+      <div class="h-1 w-full bg-vikes-green-neon shadow-[0_0_12px_rgba(0,255,127,0.8)]"></div>
+
+      <!-- Modal Header -->
+      <div class="px-6 py-5 border-b border-white/10 flex items-center justify-between">
+        <div>
+          <h2 id="sponsor-modal-title" class="text-2xl font-black uppercase tracking-tight text-white">
+            Become a <span class="text-vikes-green-neon">Sponsor</span>
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-400 mt-0.5">
+            Support Cleveland State Formula SAE • 501(c)(3) tax-deductible
+          </p>
+        </div>
+
+        <button id="close-sponsor-modal" type="button" aria-label="Close modal"
+          class="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-6">
+        <!-- Quick Action Buttons: Donate Now + Download Deck -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://support.csuohio.edu/register/give-today" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-vikes-green-neon text-black font-black uppercase tracking-wider text-xs sm:text-sm hover:bg-white transition-all shadow-[0_0_20px_rgba(0,255,127,0.35)]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            Donate Now ↗
+          </a>
+
+          <a href="resources/_Updated%2083026%20Sponsorship%20Proposal%20Request%202027.pdf" target="_blank" download
+            class="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-bold uppercase tracking-wider text-xs sm:text-sm transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-vikes-green-neon" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Deck (PDF)
+          </a>
+        </div>
+
+        <!-- Sponsorship Tiers (Clean 2x2 Grid) -->
+        <div>
+          <h3 class="text-xs font-mono uppercase tracking-widest text-gray-400 mb-3 font-semibold">
+            Sponsorship Tiers
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Bronze -->
+            <div class="p-4 rounded-xl bg-black/40 border border-[#CD7F32]/30 flex flex-col justify-between">
+              <div class="flex items-baseline justify-between mb-2">
+                <span class="text-sm font-bold text-[#CD7F32] uppercase tracking-wider">Bronze</span>
+                <span class="text-base font-black font-mono text-white">$1,000</span>
+              </div>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• Small logo on formula race car</li>
+                <li>• Website recognition & link</li>
+                <li>• Social media announcement</li>
+              </ul>
+            </div>
+
+            <!-- Silver -->
+            <div class="p-4 rounded-xl bg-black/40 border border-[#C0C0C0]/30 flex flex-col justify-between">
+              <div class="flex items-baseline justify-between mb-2">
+                <span class="text-sm font-bold text-[#C0C0C0] uppercase tracking-wider">Silver</span>
+                <span class="text-base font-black font-mono text-white">$2,500</span>
+              </div>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• Medium logo on car & trailer</li>
+                <li>• Logo on team apparel</li>
+                <li>• Website recognition & link</li>
+              </ul>
+            </div>
+
+            <!-- Gold -->
+            <div
+              class="p-4 rounded-xl bg-black/40 border border-vikes-green-neon/50 flex flex-col justify-between shadow-[0_0_15px_rgba(0,255,127,0.1)]">
+              <div class="flex items-baseline justify-between mb-2">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-sm font-bold text-vikes-green-neon uppercase tracking-wider">Gold</span>
+                  <span
+                    class="text-[9px] bg-vikes-green-neon/20 text-vikes-green-neon font-bold px-1.5 py-0.5 rounded uppercase">Popular</span>
+                </div>
+                <span class="text-base font-black font-mono text-white">$5,000</span>
+              </div>
+              <ul class="text-xs text-gray-300 space-y-1">
+                <li>• Large logo in prime chassis spots</li>
+                <li>• Student resume book & recruiting</li>
+                <li>• Featured sponsor spotlight</li>
+              </ul>
+            </div>
+
+            <!-- Platinum -->
+            <div class="p-4 rounded-xl bg-black/40 border border-white/20 flex flex-col justify-between">
+              <div class="flex items-baseline justify-between mb-2">
+                <span class="text-sm font-bold text-white uppercase tracking-wider">Platinum</span>
+                <span class="text-base font-black font-mono text-white">$7,500+</span>
+              </div>
+              <ul class="text-xs text-gray-400 space-y-1">
+                <li>• XL logo placement (sidepods & aero)</li>
+                <li>• VIP car unveiling spotlight</li>
+                <li>• Private track day & shop access</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sponsor Modal Interactive Controller
+    (function () {
+      const modal = document.getElementById("sponsor-modal");
+      const backdrop = document.getElementById("sponsor-modal-backdrop");
+      const closeBtn = document.getElementById("close-sponsor-modal");
+      const content = document.getElementById("sponsor-modal-content");
+
+      if (!modal) return;
+
+      function openModal() {
+        modal.classList.remove("opacity-0", "pointer-events-none");
+        modal.classList.add("opacity-100", "pointer-events-auto");
+        if (content) {
+          content.classList.remove("scale-95");
+          content.classList.add("scale-100");
+        }
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        modal.classList.add("opacity-0", "pointer-events-none");
+        modal.classList.remove("opacity-100", "pointer-events-auto");
+        if (content) {
+          content.classList.remove("scale-100");
+          content.classList.add("scale-95");
+        }
+        document.body.style.overflow = "";
+      }
+
+      // Open modal on any trigger button or tier card (event delegation supports dynamic elements)
+      document.addEventListener("click", function (e) {
+        const trigger = e.target.closest(".open-sponsor-modal-btn");
+        if (trigger) {
+          e.preventDefault();
+          openModal();
+        }
+      });
+
+      if (closeBtn) closeBtn.addEventListener("click", closeModal);
+      if (backdrop) backdrop.addEventListener("click", closeModal);
+
+      // Close on Escape key press
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !modal.classList.contains("pointer-events-none")) {
+          closeModal();
+        }
+      });
+
+      // Handle hash navigation
+      if (window.location.hash === "#sponsor" || window.location.hash === "#sponsor-modal") {
+        openModal();
+      }
+      window.addEventListener("hashchange", function () {
+        if (window.location.hash === "#sponsor" || window.location.hash === "#sponsor-modal") {
+          openModal();
+        }
+      });
+    })();
   </script>
 </body>
 

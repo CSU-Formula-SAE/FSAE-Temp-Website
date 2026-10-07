@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const placeholderColor = 'rgba(194,24,7,0.45)';
         const placeholderHover = 'rgba(194,24,7,0.8)';
         html += `
-            <div class="group relative rounded-xl overflow-hidden bg-secondary-bg shadow-[0_0_30px_${placeholderColor}] hover:shadow-[0_0_50px_${placeholderHover}] transition-all duration-500 border border-white/10 hover:border-white/30 cursor-pointer h-64 flex flex-col">
+            <div class="open-sponsor-modal-btn group relative rounded-xl overflow-hidden bg-secondary-bg shadow-[0_0_30px_${placeholderColor}] hover:shadow-[0_0_50px_${placeholderHover}] transition-all duration-500 border border-white/10 hover:border-white/30 cursor-pointer h-64 flex flex-col">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-90"></div>
                 
                 <div class="flex-1 flex items-center justify-center p-6 z-0">

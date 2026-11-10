@@ -146,6 +146,12 @@ window.initialAppData = {
       id: "royal-wire"
     },
     {
+      name: "Stackpole Engineering",
+      image: "/images/Bronze/stackpoleengineering.png",
+      glowColor: "rgba(205,127,50,0.45)", // Bronze
+      id: "stackpole-engineering"
+    },
+    {
       name: "Cleveland State University",
       image: "/images/clestatelogo.png",
       glowColor: "rgba(0,255,160,0.45)",
